@@ -7,12 +7,13 @@ const SearchBar = ({ search, onSearchChange, onSearchSubmit }) => {
         <Feather name="search" style={styles.iconStyle} />
         <TextInput
             autoCorrect={false}
+            autoCapitalize='none'
             style={styles.inputStyle}
             placeholder="Search"
             value={search}
             //onSearchChange is a Callback to send data to parent component(SearchScreen)
             onChangeText={newSearch => onSearchChange(newSearch)}
-            onEndEditing = {() => onSearchSubmit()}
+            onEndEditing={() => onSearchSubmit()}
         />
     </View>
 };
